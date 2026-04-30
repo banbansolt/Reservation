@@ -5,24 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
     android:orientation="vertical"
+    android:layout_margin="15dp"
     tools:context=".MainActivity">
-
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center"
+        android:text="20sp"
         android:format="예약에 걸린 시간: %s"/>
-
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="예약시작"/>
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="wrap_content"
@@ -40,10 +33,12 @@
             android:text="시간설정"/>
     </RadioGroup>
     <FrameLayout
+        android:id="@+id/frmelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <CalendarView
-            android:id="@+id/calender"
+        <DatePicker
+            android:id="@+id/calendar"
+            android:datePickerMode="calendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TimePicker
@@ -56,18 +51,12 @@
         android:orientation="horizontal"
         android:gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/btn_done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="예약완료"/>
-
+        android:layout_height="match_parent">
         <TextView
             android:id="@+id/text_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"/>
+            android:text="예약결과"
+            android:textSize="15sp"/>
     </LinearLayout>
 </LinearLayout>
